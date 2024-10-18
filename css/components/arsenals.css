@@ -1,0 +1,85 @@
+.my_arsenals{
+    margin-bottom: 150px;
+    margin-top: 120px;
+}
+.weapon{
+    margin-block: 40px;
+    text-align: center;
+}
+h2 > span.kill {
+    color: var(--color);
+}
+h2 > span.all{
+    color: var(--color2);
+}
+
+.arsenals svg{
+    width: 50px;
+    height: 50px;
+}
+.arsenals .js{
+    color: #F7DF1E;
+}
+.arsenals .md{
+    color: #47A248;
+}
+.arsenals .ex{
+    color: #fff;
+}
+.arsenals .nJs{
+    color: #5FA04E;
+}
+.arsenals .bash{
+    color: #4EAA25;
+}
+.arsenals .git{
+    color: #F05032;
+}
+
+.arsenals .html{
+    color: #E34F26;
+}
+.arsenals .css{
+    color: #1572B6;
+}
+
+.arsenals svg{
+    fill: currentColor;
+}
+.arsenals a{
+    margin-inline: auto;
+}
+.arsenals{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 50px 30px;
+}
+.arsenals p{
+    color: var(--white);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 215px;
+    height: 65.35px;
+    border: 0.1px solid var(--dark-grey);
+    border-radius: 10px;
+    background: var(--dark-grey);
+    transition: transform 0.3s ease-in-out; 
+    box-shadow: 10px 10px 10px var(--color);
+}
+.flex:hover{
+    box-shadow: 10px 10px 10px var(--color);
+    transform: scale(1.1);
+}
+
+@media (min-width: 50.625em) {
+    h2{
+        font-size: 34px;
+    }
+    .arsenals{
+        grid-template-columns: repeat(4,1fr);
+    }
+}

@@ -1,0 +1,66 @@
+:root{
+    --background: hsl(0, 0%, 8%);
+    --dark-grey: hsl(0, 0%, 14%);
+    --green: hsl(153, 71%, 59%);
+    --gray: hsl(0, 0%, 85%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(7, 100%, 68%);
+    --color: hsl(267, 84%, 81%);
+    --color2: hsla(201, 94%, 86%, 0.95);
+    --blend: linear-gradient(hsl(267, 84%, 81%),hsla(201, 94%, 86%, 0.95));
+    --fs-18: 1.124rem; 
+    --fs-88: 5.5rem;/*  XL */
+    --fs-72: 4.5rem;
+    --fs-40: 2.5rem;
+    --fs-48: 3rem;  /* L */
+    --fs-32: 2rem;
+    --fs-24: 1.5rem; /* M */
+    --cont-1110: 69.375rem; 
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    background-color: var(--background);
+    color: var(--white);
+    font-size: var(--fs-18);
+    line-height: 1.56; /*28*/
+}
+h1,h2,h3{
+    margin: 0;
+    font-weight: 700;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    list-style-type: none;
+    text-decoration: none;
+}
+p{
+    font-weight: 600;
+    color: rgba(186,230,253,.95);
+}
+
+/* margin is 16px in mobile, 30px in tab */
+.wrapper{
+    width: calc(100% - 2em); /* 16px on each side */
+    max-width: var(--cont-1110);
+    margin-inline: auto;
+}
+
+@media (min-width: 37.5em) {  /* 600px */
+    .wrapper{
+        width: calc(100% - 3.75em);/* 30px on each side */
+    }
+}
+
+hr.new{
+    border-top: 1px solid var(--dark-grey);
+}

@@ -1,0 +1,51 @@
+header{
+    margin-top: 20px;
+    
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px 25px;
+}
+
+.me{
+    flex: 1 0 100%;
+    /* Grow (1) to take up any remaining space.
+       Not shrink (0), even if the container is too small.
+       Have an initial size of 100px (flex-basis). */
+    font-size: 24px;/* see for tab pc */
+}
+
+.social-icons a{
+    color: #fff;
+}
+
+.social-icons svg{
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    transition: color 0.3s ease-in-out;
+    display: block;
+}
+
+.social-icons a:hover{
+    color: rgba(186,230,253,.95);
+}
+
+@media (min-width: 37.5em) {  /* 600px */
+    .nav{
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        gap: 32px;
+        margin-bottom: 90px;
+    }
+    .me{
+        flex: 1;
+        margin-inline-end: auto;
+
+    }
+
+}

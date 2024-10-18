@@ -1,0 +1,94 @@
+.pro{
+    margin-top: 7em;
+    margin-bottom: 7em;
+}
+
+.project img{
+    margin-inline: auto;
+
+}
+.project p{
+    text-align: start;
+    padding-left: 5px;
+    color: var(--color);
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+}
+ .project{
+    margin-inline: auto;
+    width: 250px;
+    height: 170px;
+    /* border: 0.1px solid var(--dark-grey); */
+    border-radius: 5px;
+    background-color: var(--dark-grey);
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.project::after, .project::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent 70%,#bae5fdf2,#caa6f7);
+    /* background-image: conic-gradient(#F7DF1E,#47A248,#fff,#5FA04E,#4EAA25,#F05032,#E34F26,#1572B6); */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 88px;
+    padding-inline: 128px;
+    border-radius: 5px;
+    animation: 3s spin linear infinite;
+}
+.project::before{
+    filter:blur(1.5em);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+footer{
+    margin-top: 7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+}
+.footer a{
+    color: #fff;
+    margin-left: 2em;
+}
+
+.footer svg{
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+}
+.foot{
+    margin-right: 2em;
+}
+
+ @media (min-width: 50.625em) {
+    h2{
+        font-size: 34px;
+    }
+    .content{
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+} 
+
